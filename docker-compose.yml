@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    container_name: gestao-escolar-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    # O comando do Dockerfile já inclui --reload, que é ideal para desenvolvimento
+    # e funciona bem com o volume montado acima.
